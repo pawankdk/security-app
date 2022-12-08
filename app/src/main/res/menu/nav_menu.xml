@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:title="General">
+        <menu>
+            <item
+                android:id="@+id/nav_home"
+                android:icon="@drawable/ic_baseline_dashboard_24"
+                android:title="@string/menu_home" />
+        </menu>
+    </item>
+
+    <item android:title="SignOut">
+        <menu>
+            <item
+                android:id="@+id/nav_signout"
+                android:icon="@drawable/ic_power_off_solid"
+                android:title="@string/sign_out" />
+        </menu>
+    </item>
+
+    <item android:title="Others">
+        <menu>
+            <item
+                android:id="@+id/nav_aboutus"
+                android:title="@string/about_us" />
+            <item
+                android:id="@+id/nav_privacypolicy"
+                android:title="@string/privacy_policy" />
+            <item
+                android:id="@+id/nav_version"
+                android:title="@string/version" />
+        </menu>
+    </item>
+
+</menu>

@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--to scroll page-->
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/background_reg">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:context=".Auth.SignInFragment">
+
+        <!-- TODO: Update Sign In fragment layout -->
+<!--        background design-->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="-1dp"
+                android:layout_marginTop="-22dp"
+                android:layout_marginRight="-1dp"
+                android:src="@mipmap/sign_in" />
+
+        </RelativeLayout>
+
+<!--        sign in text-->
+        <TextView
+            android:id="@+id/signin_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/Widget.AppCompat.TextView.SpinnerItem"
+            android:text="@string/sign_in"
+            android:layout_gravity="center"
+            android:textAllCaps="true"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            android:layout_marginBottom="130dp"/>
+
+
+<!--        email input-->
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/emailLayout"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:textColorHint="@color/ash"
+            android:layout_gravity="center"
+            android:layout_marginStart="25dp"
+            android:layout_marginEnd="25dp"
+            android:layout_marginBottom="70dp" >
+
+            <EditText
+                android:id="@+id/email"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textEmailAddress"
+                android:hint="@string/Email"
+                android:background="@color/black"
+                android:textColorHint="@color/ash"
+                android:textColor="@color/white"
+                android:enabled="true"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+<!--        password input-->
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/passwordLayout"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            app:passwordToggleEnabled="true"
+            app:passwordToggleTint="@color/ash"
+            android:textColorHint="@color/ash"
+            android:layout_gravity="center"
+            android:layout_marginStart="25dp"
+            android:layout_marginEnd="25dp">
+
+            <EditText
+                android:id="@+id/password"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/black"
+                android:inputType="textPassword"
+                android:hint="@string/Password"
+                android:textColor="@color/white"
+                android:enabled="true"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+<!--            check box for remember me-->
+        <CheckBox
+            android:id="@+id/rememberme"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_gravity="center"
+            android:checked="false"
+            android:text="@string/remember_me"
+            android:textColor="@color/blue"
+            android:textSize="20sp"
+            android:layout_marginTop="50dp"
+            android:layout_marginStart="20dp"
+            android:enabled="true"/>
+
+        <LinearLayout
+            android:id="@+id/fingerprint"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_gravity="center"
+            android:layout_marginTop="90dp"
+            android:visibility="visible">
+
+            <ImageView
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:src="@drawable/ic_baseline_fingerprint_24"
+                android:layout_marginRight="10dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/tap_to_login_ith_fingerprint"
+                android:textColor="@color/blue"/>
+
+
+        </LinearLayout>
+
+<!--        sign in progressbar-->
+        <ProgressBar
+            android:id="@+id/signin_progess"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:visibility="gone"/>
+
+<!--            signin button-->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/signinbtn"
+            android:layout_width="200dp"
+            android:layout_height="60dp"
+            app:cornerRadius="18dp"
+            android:text="@string/sign_in"
+            android:backgroundTint="@color/blue"
+            android:layout_gravity="center"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:enabled="false"
+            android:layout_marginTop="159dp"
+            />
+
+
+<!--            forgot password button-->
+        <TextView
+            android:id="@+id/forgotpass"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="250dp"
+            android:clickable="true"
+            android:focusable="true"
+            android:textAllCaps="true"
+            android:layout_gravity="center"
+            android:text="@string/forgot_password"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            android:enabled="true"
+            tools:ignore="AllCaps" />
+
+<!--    or text-->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="290dp"
+            android:layout_gravity="center"
+            android:text="@string/or"
+            android:textColor="@color/black"
+            android:textSize="20sp" />
+
+<!--            new account button-->
+        <TextView
+            android:id="@+id/orsign_up"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="370dp"
+            android:layout_gravity="center"
+            android:text="@string/don_t_have_an_account"
+            android:clickable="true"
+            android:focusable="true"
+            android:textAllCaps="true"
+            android:textColor="@color/green"
+            android:textSize="18sp"
+            android:enabled="true"
+            tools:ignore="AllCaps" />
+
+
+    </FrameLayout>
+
+</ScrollView>
